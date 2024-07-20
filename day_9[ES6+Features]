@@ -1,0 +1,109 @@
+
+// Activity 1 : Template literals
+//------------------------------------------------
+// Task 1: 
+var nam = 'Vinay';
+var age = 21;
+console.log(nam+" "+age);   //without templete literals
+console.log(`${nam} ${age}`);   //with template literals
+
+// Task 2: create an multiline string using template literals
+var a = `
+If your submission file has 417 rows while Kaggle expects 418, it suggests that there might be a mismatch between the number of rows in your predictions and the number of rows in the test data. `;
+console.log(a);;
+
+// Activity 2 : Desturcturing
+//------------------------------------------------
+// Task 3: using array destructuring to extract elents
+const [c,b] = [1,2,3,4,5];
+console.log(c);
+console.log(b);
+const [e,,d] = [1,2,3,4,5];
+console.log(d);             // 3
+
+// Task 4: Destructuring in objects
+var book = {"Title": "The journey",
+    "Author": "Vinay",
+    "year": 2024
+}
+var {Title, Author} = book;
+console.log(Title);
+
+
+// Activity 3 : Spread and Rest Operators
+//------------------------------------------------
+// Task 5: spread operator 
+//=================************===================
+//The spread operator in ES6 (...) allows you to expand elements of an iterable (like an array or string) or properties of an object. It is useful in various scenarios, such as copying arrays, merging arrays, and spreading object properties.
+
+// copying an array
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1];
+console.log(arr2); // [1, 2, 3]
+
+// Merging Arrays:
+const arr3 = [1, 2, 3];
+const arr4 = [4, 5, 6];
+const mergedArr = [...arr3, ...arr4];
+console.log(mergedArr); // [1, 2, 3, 4, 5, 6]
+
+//Using the Spread Operator in Function Calls:
+const numbers = [1, 2, 3];
+const sum = (a, b, c) => a + b + c;
+console.log(sum(...numbers)); // 6
+
+
+//=================************===================
+const arr = [1,2];
+const newAr = [...arr, 6,7,8,9];
+console.log(newAr);
+
+// Task 6: Rest 
+// The rest parameter syntax allows a function to accept an indefinite number of arguments as an array
+function sumOf(...anArg) {
+    total =0;
+    for (const ele of anArg) {
+        total += ele;
+    }
+    console.log(total);
+}
+sumOf(2,8,9);
+sumOf(55,29,2,854,8,3221,4);
+
+// Activity 4 : Default parameteres
+//------------------------------------------------
+// Task 7: 
+var prod = function(a,b=2){
+    console.log(a*b);
+}
+prod(3,5);
+prod(4); 
+
+// Activity 5 : Enhanced Object Literals
+//------------------------------------------------
+// Task 8:  
+var book1 = {"Title": "The journey",
+    "Author": "Vinay",
+    "year": 2024,
+    "newMethod": function(){
+        console.log('i am method');
+    }
+}
+console.log(book1);
+
+// Task 9:
+const key1 = "city";
+const key2 = "country";
+const key3 = "cgpa";
+
+const value1 = "indore";
+const value2 = "india";
+const value3 = 9;
+
+const obj = {}
+
+obj[key1] = value1;
+obj[key2] = value2;
+obj[key3] = value3;
+
+console.log(obj);
